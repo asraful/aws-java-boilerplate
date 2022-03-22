@@ -12,18 +12,16 @@ import com.cloud.orc.core.model.ConnectionProperty;
 @Service
 public class PlayGround {
 
-	@Autowired
-	private AWSConnector awsConnector;
-	
-	
-	@Autowired
-	AWSConnectorProperties connectionProperty;
-	
-	@EventListener(ApplicationReadyEvent.class)
-	public void play() {
-		
-		System.out.println(connectionProperty.getAccessKey());
+    @Autowired
+    private AWSConnector awsConnector;
+    @Autowired
+    AWSConnectorProperties connectionProperty;
+
+    @EventListener(ApplicationReadyEvent.class)
+    public void play() {
+
+        System.out.println(connectionProperty.getAccessKey());
 //		awsConnector.getS3Cinet();
-	}
+    }
 
 }
